@@ -113,7 +113,7 @@ class AdaptiveContentHierarchy extends DataExtension
             $this->owner->ID
         );
         
-        if ($this->owner->hasExtension('VersionedDataObject')) {
+        if ($this->owner->hasExtension('HeydayVersionedDataObject')) {
             $config->addComponent(new GridFieldWhereableVersionedOrderableRows('Sort', $where));
             $config->removeComponentsByType('GridFieldDetailForm');
             $config->addComponent(new VersionedDataObjectDetailsForm());
